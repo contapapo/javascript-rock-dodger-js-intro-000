@@ -162,10 +162,10 @@ function moveDodger(e) {
    */
    document.addEventListener('keydown', function (e) {
      if(e.which === LEFT_ARROW){
-        window.requestAnimationFrame(moveDodgerLeft())
+        moveDodgerLeft()
      }
      else if (e.which === RIGHT_ARROW) {
-       window.requestAnimationFrame(moveDodgerRight())
+        moveDodgerRight()
      }
    })
 
