@@ -91,28 +91,26 @@ function createRock(x) {
         if (top < 400) {
           window.requestAnimationFrame(step)
 
-          if (checkCollision(rock) == true){
+          /**
+           * If a rock collides with the DODGER,
+           * we should call endGame()
+           */
+            if (checkCollision(rock) == true){
             endGame();
-          }
+            }
         }
 
         else {
           rock.remove();
         }
       }
-    /**
-     * If a rock collides with the DODGER,
-     * we should call endGame()
-     */
+    
 
     /**
      * Otherwise, if the rock hasn't reached the bottom of
      * the GAME, we want to move it again.
      */
       {
-      //  rock.style.top = `${top += 2}px`
-
-
        window.requestAnimationFrame(step);
      }
     /**
@@ -145,7 +143,7 @@ function endGame() {
    })
 
    window.addEventListener('keydown', moveDodger)
-   
+
   START.innerHTML = 'YOU LOSE!'
   return alert('YOU LOSE!');
 }
