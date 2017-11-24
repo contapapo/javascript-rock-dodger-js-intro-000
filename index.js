@@ -86,16 +86,14 @@ function createRock(x) {
     // (use the comments below to guide you!)
     var top = 0
 
-    if (checkCollision(rock) == true){
-      endGame();
-    }
-
       function step() {
         rock.style.top = `${top += 2}px`
         if (top < 400) {
           window.requestAnimationFrame(step)
 
-          
+          if (checkCollision(rock) == true){
+            endGame();
+          }
         }
 
         else {
