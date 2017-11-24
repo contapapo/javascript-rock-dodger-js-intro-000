@@ -182,7 +182,7 @@ function moveDodgerLeft() {
    left = parseInt(moveLeft, 10);
 
    function step() {
-       if(left > 4){
+       if(left >= 4){
          DODGER.style.left = `${left - 4}px`;
          //window.requestAnimationFrame(step)
        }
